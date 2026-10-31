@@ -1,0 +1,65 @@
+{
+  "version": "0.2.1",
+  "dshVersion": "0.2.1-rc.5",
+  "testedAt": "2026-10-31T13:32:11.959Z",
+  "builtFiles": {
+    "package.json": "ef79b0d0f8e098acab08214700ae36525b4e71639fe386ccf855c15aec5011a9",
+    "cordis.patch.yml": "d949bbbaa7aeb853a8f4dd6524aa24568d3e5664bcedaf904f9e8eccc4015d13",
+    "lib/index.js": "eb2cf16ef4ddc5708c1595585ef38b406c71158adc66330490e0b831f1404782",
+    "lib/client.js": "b9161a83e5e5d3044d1ee10a76dda7b1f2e4dbd6bc7706b48684370332fe303f",
+    "LICENSES/Saira-OFL.txt": "f2665d4718b452b3818a877191355ac884a6b9b419d35408fe7ee487e9e8f30f",
+    "ASSETS.json": "1f279214a28588e484c41718c309c4cb2835cfd8d625bc8215347a0dce95db08"
+  },
+  "home": {
+    "controls": 26,
+    "differences": []
+  },
+  "pluginPage": {
+    "controls": 33,
+    "differences": []
+  },
+  "settings": {
+    "controls": 47,
+    "differences": []
+  },
+  "rollback": {
+    "bodyToken": "",
+    "intro": 0,
+    "skin": null,
+    "styles": 0
+  },
+  "coldStart": {
+    "editor": true,
+    "overlay": 0,
+    "skin": "0.2.1",
+    "styles": 1
+  },
+  "coldStartLogs": [],
+  "stylesheet": {
+    "expected": "1eaa655a26fa82b9dac447fe33076f40c694013433d8461424cc63eaf1060333",
+    "actual": "1eaa655a26fa82b9dac447fe33076f40c694013433d8461424cc63eaf1060333"
+  },
+  "checks": {
+    "lightDarkSystem": true,
+    "editorTypingAndDeletion": true,
+    "settingsOpenClose": true,
+    "pluginEnableDisable": true,
+    "startupRemoved": true,
+    "stylesheetMatchesBuild": true,
+    "mainColorsRestored": true,
+    "noBrowserWarningsOrErrors": true
+  },
+  "colors": {
+    "light": {
+      "base": "#f4f4f2",
+      "input": "#fafaf8",
+      "sidebar": "#e9e9e3"
+    },
+    "dark": {
+      "base": "#191919",
+      "input": "#242424",
+      "sidebar": "#202020"
+    }
+  },
+  "scope": "Fresh isolated packaged DSH backend and renderer. Main/settings geometry compared to retained unskinned baseline at same viewport; plugin geometry measured after actual style detach/attach at identical scroll. No model requests."
+}

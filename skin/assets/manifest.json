@@ -1,0 +1,41 @@
+{
+  "assets": [
+    {
+      "file": "twill.png",
+      "source": "/Users/alooshy/Documents/Codex/2026-10-22/agent-https-rahoo-online-1-2/archive/inline/00b45b9d49e699a1044a7e2a.png",
+      "origin": "https://rahoo.online/assets/black-twill-0nQn49IK.js",
+      "rights": "Rahoo local, user-authorized visual reuse",
+      "sha256": "8d561eae2bfa190ab76a02e865467c38cc441a2d0c3c7292cfc057a0210b4d64"
+    },
+    {
+      "file": "noise.png",
+      "source": "/Users/alooshy/Documents/Codex/2026-10-22/agent-https-rahoo-online-1-2/archive/site/assets/noise-CihrA9lx.png",
+      "origin": "https://rahoo.online/assets/noise-CihrA9lx.png",
+      "rights": "Rahoo local, user-authorized visual reuse",
+      "sha256": "7c4c79f7e259c80a24b5987b807b1f2f2ce5d25ba85ab62463741fa81b9284dc"
+    },
+    {
+      "file": "Saira.ttf",
+      "source": "/Users/alooshy/.codex/skills/endfield-ui/templates/flutter/fonts/Saira.ttf",
+      "origin": "endfield-ui skill, bundled Saira font",
+      "rights": "SIL Open Font License 1.1",
+      "sha256": "9d050fc5a01c85f74c4257c207d50b55d1e40c37308c642f974a2c5003231dde"
+    },
+    {
+      "file": "contours.png",
+      "source": "/Users/alooshy/Documents/Codex/2026-10-22/agent-https-rahoo-online-1-2/archive/site/assets/contour-line-CStZII0Z.png",
+      "origin": "https://rahoo.online/assets/contour-line-CStZII0Z.png",
+      "rights": "Rahoo local, user-authorized visual reuse",
+      "sha256": "bf19b15c8fe28c53fd0d8df1736785ac13286346c3fab99d43c097837907ed63"
+    },
+    {
+      "file": "harness-wordmark.svg",
+      "source": "Created for DeepSeek Harness skin v0.2.0",
+      "origin": "local original SVG lettering",
+      "rights": "Original project UI graphic",
+      "sha256": "21ce560c04ece61680b4d28bd6a983afe3784ecc4bcf14057e4ac6acb45fe1b3"
+    }
+  ],
+  "character_images": false,
+  "external_requests_at_runtime": false
+}

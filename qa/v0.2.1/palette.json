@@ -1,0 +1,16 @@
+{
+  "tokensMatchVersion": "0.1.0",
+  "all85PairsEqual": true,
+  "base": {
+    "light": "#f4f4f2",
+    "dark": "#191919"
+  },
+  "sidebar": {
+    "light": "#e9e9e3",
+    "dark": "#202020"
+  },
+  "input": {
+    "light": "#fafaf8",
+    "dark": "#242424"
+  }
+}

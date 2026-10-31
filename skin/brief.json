@@ -1,0 +1,34 @@
+{
+  "status": "verified-installed",
+  "version": "0.2.1",
+  "target": "DeepSeek Harness Desktop",
+  "referenceVersion": "0.2.1-rc.5",
+  "style": "Endfield industrial panels, Rahoo contours, outline wordmark and acid-yellow accents",
+  "palette": {
+    "light": [
+      "#f4f4f2",
+      "#161616",
+      "#fffa00"
+    ],
+    "dark": [
+      "#191919",
+      "#ededed",
+      "#fffa00"
+    ]
+  },
+  "typography": "Host UI metrics unchanged; Saira only on the startup overlay",
+  "layout": "Existing component positions, sizes, padding, typography and scrolling retained",
+  "motion": {
+    "startupMs": 1000,
+    "wordmark": "DEEPSEEK HARNESS",
+    "reducedMotion": "skip startup and disable added interaction motion",
+    "interactionsMs": [140, 240, 260]
+  },
+  "illustration": "No game characters; Rahoo contours on the empty conversation and startup, original outline HARNESS SVG, subtle twill and noise",
+  "modes": [
+    "light",
+    "dark",
+    "system"
+  ],
+  "semanticColors": "Existing error, warning, success and diff colors retained"
+}

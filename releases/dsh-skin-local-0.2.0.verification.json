@@ -1,0 +1,16 @@
+{
+  "status": "verified",
+  "version": "0.2.0",
+  "dsh_version": "0.2.1-rc.5",
+  "asar_sha256": "8dad52f295bdbe9fa71948fdf38ac2ce3c910213d3b89c37174b2af77db9fb31",
+  "files": {
+    "package.json": "5beadb980753e960444388d08a48f98d57f6d5e8fc825e6d9aea7a26863d586d",
+    "cordis.patch.yml": "d949bbbaa7aeb853a8f4dd6524aa24568d3e5664bcedaf904f9e8eccc4015d13",
+    "lib/index.js": "eb2cf16ef4ddc5708c1595585ef38b406c71158adc66330490e0b831f1404782",
+    "lib/client.js": "1e02e02119306663f3b51013fe3c453d2af86d441367f60f4a326c9364c0a4a1",
+    "LICENSES/Saira-OFL.txt": "f2665d4718b452b3818a877191355ac884a6b9b419d35408fe7ee487e9e8f30f",
+    "ASSETS.json": "1f279214a28588e484c41718c309c4cb2835cfd8d625bc8215347a0dce95db08"
+  },
+  "verified_at": "2026-10-31T13:22:56.330766+00:00",
+  "evidence": "/Users/alooshy/Documents/ChatGPT/forDSH/qa/v0.2.0"
+}
