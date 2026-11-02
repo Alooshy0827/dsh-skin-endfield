@@ -29,3 +29,10 @@ qa/v0.2.1/*
 !qa/v0.2.0/
 qa/v0.2.0/*
 !qa/v0.2.0/startup-recording.mp4
+!qa/v0.3.0/
+qa/v0.3.0/*
+!qa/v0.3.0/runtime.json
+!qa/v0.3.0/desktop.json
+!qa/v0.3.0/geometry.json
+!qa/v0.3.0/light-home.png
+!qa/v0.3.0/dark-home.png

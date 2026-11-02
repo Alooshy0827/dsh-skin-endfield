@@ -16,7 +16,8 @@ CSS_MARKER = '/* SKIN_CSS */ ""'
 def rendered_client(template, tokens):
     css = (ROOT / "skin/appearance.css").read_text() + "\n" + (ROOT / "skin/details.css").read_text()
     for marker, filename, mime in [
-        ("__SAIRA_DATA_URL__", "Saira.ttf", "font/ttf"),
+        ("__HARMONY_REGULAR_DATA_URL__", "HarmonyOS_Sans_SC_Regular.ttf", "font/ttf"),
+        ("__HARMONY_BOLD_DATA_URL__", "HarmonyOS_Sans_SC_Bold.ttf", "font/ttf"),
         ("__NOISE_DATA_URL__", "noise.png", "image/png"),
         ("__TWILL_DATA_URL__", "twill.png", "image/png"),
         ("__CONTOURS_DATA_URL__", "contours.png", "image/png"),
@@ -64,9 +65,10 @@ def main():
     DESTINATION.joinpath("package.json").write_text(json.dumps(package, ensure_ascii=False, indent=2) + "\n")
     DESTINATION.joinpath("cordis.patch.yml").write_text((ROOT / "skin/cordis.patch.yml").read_text())
     DESTINATION.joinpath("LICENSES").mkdir(exist_ok=True)
-    DESTINATION.joinpath("LICENSES/Saira-OFL.txt").write_bytes((ROOT / "skin/assets/Saira-OFL.txt").read_bytes())
+    DESTINATION.joinpath("LICENSES/HarmonyOS-Sans-LICENSE.txt").write_bytes((ROOT / "skin/assets/HarmonyOS-Sans-LICENSE.txt").read_bytes())
+    DESTINATION.joinpath("LICENSES/Saira-OFL.txt").unlink(missing_ok=True)
     DESTINATION.joinpath("ASSETS.json").write_bytes((ROOT / "skin/assets/manifest.json").read_bytes())
-    paths = ["package.json", "cordis.patch.yml", "lib/index.js", "lib/client.js", "LICENSES/Saira-OFL.txt", "ASSETS.json"]
+    paths = ["package.json", "cordis.patch.yml", "lib/index.js", "lib/client.js", "LICENSES/HarmonyOS-Sans-LICENSE.txt", "ASSETS.json"]
     report = {
         "reference_version": manifest["version"], "asar_sha256": manifest["asar_sha256"],
         "version": package["version"],

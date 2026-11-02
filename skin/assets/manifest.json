@@ -15,13 +15,6 @@
       "sha256": "7c4c79f7e259c80a24b5987b807b1f2f2ce5d25ba85ab62463741fa81b9284dc"
     },
     {
-      "file": "Saira.ttf",
-      "source": "/Users/alooshy/.codex/skills/endfield-ui/templates/flutter/fonts/Saira.ttf",
-      "origin": "endfield-ui skill, bundled Saira font",
-      "rights": "SIL Open Font License 1.1",
-      "sha256": "9d050fc5a01c85f74c4257c207d50b55d1e40c37308c642f974a2c5003231dde"
-    },
-    {
       "file": "contours.png",
       "source": "/Users/alooshy/Documents/Codex/2026-10-22/agent-https-rahoo-online-1-2/archive/site/assets/contour-line-CStZII0Z.png",
       "origin": "https://rahoo.online/assets/contour-line-CStZII0Z.png",
@@ -34,6 +27,20 @@
       "origin": "local original SVG lettering",
       "rights": "Original project UI graphic",
       "sha256": "21ce560c04ece61680b4d28bd6a983afe3784ecc4bcf14057e4ac6acb45fe1b3"
+    },
+    {
+      "file": "HarmonyOS_Sans_SC_Regular.ttf",
+      "source": "Huawei official HarmonyOS-Sans.zip / HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Regular.ttf",
+      "origin": "https://developer.huawei.com/images/download/general/HarmonyOS-Sans.zip",
+      "rights": "HarmonyOS Sans Fonts License Agreement; unmodified original font bundled with this skin",
+      "sha256": "297b088424be212207df2ce8b98e335468b782aa6b96832af0b8b773d711e2b1"
+    },
+    {
+      "file": "HarmonyOS_Sans_SC_Bold.ttf",
+      "source": "Huawei official HarmonyOS-Sans.zip / HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Bold.ttf",
+      "origin": "https://developer.huawei.com/images/download/general/HarmonyOS-Sans.zip",
+      "rights": "HarmonyOS Sans Fonts License Agreement; unmodified original font bundled with this skin",
+      "sha256": "43a424b85e47fb53a17b3b32026a71801f86f8e022ca6798d186b47d39fa5f01"
     }
   ],
   "character_images": false,

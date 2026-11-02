@@ -1,5 +1,5 @@
 /* Version-bound selectors verified against DSH 0.2.1-rc.5.
-   No layout, font-metric, input, drag-region or scrolling changes to host UI. */
+   Host layout, sizes, input, drag-region and scrolling are retained. */
 body[data-dsh-endfield-skin] {
   --dsh-ef-yellow: #fffa00;
   --dsh-ef-line: #16161626;
@@ -56,11 +56,18 @@ body[data-dsh-endfield-skin] ::selection { background: #fffa00; color: #161616; 
     transition: background-size 260ms cubic-bezier(.7,0,.2,1),background-color 140ms cubic-bezier(.7,0,.2,1),color 140ms cubic-bezier(.7,0,.2,1),box-shadow 140ms cubic-bezier(.7,0,.2,1);
   }
 }
-/* Saira is confined to our overlay; existing application text keeps its metrics. */
+/* Official unmodified HarmonyOS Sans fonts; license bundled with the skin. */
 @font-face {
-  font-family: "DSH Endfield Display";
-  src: url("__SAIRA_DATA_URL__") format("truetype");
-  font-weight: 100 900;
+  font-family: "DSH HarmonyOS Sans";
+  src: url("__HARMONY_REGULAR_DATA_URL__") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DSH HarmonyOS Sans";
+  src: url("__HARMONY_BOLD_DATA_URL__") format("truetype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -94,7 +101,7 @@ body[data-dsh-endfield-skin] ::selection { background: #fffa00; color: #161616; 
   max-width: 88vw;
   border-block: 1px solid var(--dsh-ef-ink);
   padding: 26px 48px 30px 32px;
-  font-family: "DSH Endfield Display",Arial,sans-serif;
+  font-family: "DSH HarmonyOS Sans",Arial,sans-serif;
   font-size: clamp(32px,7vw,100px);
   font-weight: 650;
   line-height: 1.06;

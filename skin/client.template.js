@@ -40,7 +40,7 @@ window.__ModuleLoader__.load({
             style.id = STYLE_ID;
             style.textContent = css;
             document.head.appendChild(style);
-            body.setAttribute(ATTR, "0.2.1");
+            body.setAttribute(ATTR, "0.3.0");
 
             // No layout participation, focus change, or input capture.
             if (typeof window.matchMedia === "function" &&

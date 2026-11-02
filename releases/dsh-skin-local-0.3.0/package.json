@@ -1,0 +1,35 @@
+{
+  "name": "dsh-skin-local",
+  "version": "0.3.0",
+  "private": true,
+  "description": "终末地风格皮肤 · 使用 HarmonyOS Sans 鸿蒙字体 · 保留原布局",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "LICENSES",
+    "ASSETS.json"
+  ],
+  "engines": {
+    "dsh": "0.2.1-rc.5"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  }
+}

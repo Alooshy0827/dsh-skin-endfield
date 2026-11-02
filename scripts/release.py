@@ -17,6 +17,35 @@ from compatibility import render_readme
 from prepare import file_hash
 
 
+def verify_typography_geometry(qa, runtime):
+    """Keep layout fixed while auditing the explicitly requested font replacement.
+
+    Record every changed box: only <=4px text width and <=1/8px inline
+    rounding are accepted. Container boxes, vertical flow and heights stay exact.
+    """
+    geometry = json.loads((qa / "geometry.json").read_text())
+    for page in ("home", "pluginPage", "settings"):
+        before, after = geometry[page]["before"], geometry[page]["after"]
+        for key in ("layout", "viewport", "scroll"):
+            if not before[key] or before[key] != after[key]:
+                raise ValueError(f"Font replacement changed {page} {key}")
+        if len(before["controls"]) != len(after["controls"]) or len(after["controls"]) != runtime[page]["controls"]:
+            raise ValueError(f"Incomplete font geometry evidence: {page}")
+        differences = []
+        for old, new in zip(before["controls"], after["controls"]):
+            for key in ("name", "tag", "y", "height"):
+                if old[key] != new[key]:
+                    raise ValueError(f"Font replacement moved/reflowed {page} {old['name']}")
+            for key, tolerance in (("x", 0.125), ("width", 4)):
+                if old[key] == new[key]:
+                    continue
+                if abs(old[key] - new[key]) > tolerance or old["font"] == new["font"]:
+                    raise ValueError(f"Unexpected geometry change: {page} {old['name']} {key}")
+                differences.append({"name": old["name"], "property": key, "before": old[key], "after": new[key]})
+        if differences != runtime[page]["differences"]:
+            raise ValueError(f"Unreported font metrics changes: {page}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--candidate", action="store_true", help="Freeze the exact build for desktop testing")
@@ -30,8 +59,10 @@ def main():
     if runtime["builtFiles"] != build["files"]:
         raise ValueError("Runtime evidence is stale: test this exact build before releasing")
     for page in ("home", "pluginPage", "settings"):
-        if runtime[page]["differences"] or runtime[page]["controls"] < 20:
+        if (runtime[page]["differences"] and not runtime.get("typographyChange")) or runtime[page]["controls"] < 20:
             raise ValueError(f"Geometry regression or incomplete evidence: {page}")
+    if runtime.get("typographyChange"):
+        verify_typography_geometry(qa, runtime)
     if runtime["rollback"] != {"bodyToken": "", "intro": 0, "skin": None, "styles": 0}:
         raise ValueError("Rollback did not restore original appearance")
     if runtime["coldStartLogs"] or runtime["coldStart"] != {"editor": True, "overlay": 0, "skin": build["version"], "styles": 1}:

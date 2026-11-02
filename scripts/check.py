@@ -57,11 +57,17 @@ def main():
     _, package, tokens, template = inputs()
     # Enforce the user's geometry constraint on each build, not only this version.
     for name in tokens:
-        if not name.startswith(("--dsw-alias-", "--dsw-specific-", "--dsw-radius-", "--dsw-shadow-")) and name not in {"--dsw-corner-shape", "--ds-ease-in-out"}:
+        if not name.startswith(("--dsw-alias-", "--dsw-specific-", "--dsw-radius-", "--dsw-shadow-")) and name not in {"--dsw-corner-shape", "--ds-ease-in-out", "--dsw-font-family"}:
             raise ValueError(f"Non-appearance token requires review: {name}")
         if any(x in name for x in ("state-error", "state-success", "state-warn", "code-diff", "file-diff")):
             raise ValueError(f"Semantic status token must stay native: {name}")
     check_css_geometry()
+    assets = json.loads((ROOT / "skin/assets/manifest.json").read_text())
+    for asset in assets["assets"]:
+        if file_hash(ROOT / "skin/assets" / asset["file"]) != asset["sha256"]:
+            raise ValueError(f"Asset differs from its recorded original: {asset['file']}")
+    if (DESTINATION / "LICENSES/HarmonyOS-Sans-LICENSE.txt").read_bytes() != (ROOT / "skin/assets/HarmonyOS-Sans-LICENSE.txt").read_bytes():
+        raise ValueError("Bundled font license must match the original")
     if re.search(r"\b(fetch|XMLHttpRequest|WebSocket|localStorage|sessionStorage|eval)\s*[.(]", template):
         raise ValueError("Skin must remain local and must not access application data")
     report = json.loads((ROOT / "dist/build-report.json").read_text())

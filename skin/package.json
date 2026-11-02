@@ -1,8 +1,8 @@
 {
   "name": "dsh-skin-local",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": true,
-  "description": "终末地风格皮肤 · 工业分区 / 斜纹 / 短动效 · 原布局保留",
+  "description": "终末地风格皮肤 · 使用 HarmonyOS Sans 鸿蒙字体 · 保留原布局",
   "type": "module",
   "main": "./lib/index.js",
   "exports": {

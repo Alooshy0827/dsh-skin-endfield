@@ -1,6 +1,6 @@
 {
   "status": "verified-installed",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "target": "DeepSeek Harness Desktop",
   "referenceVersion": "0.2.1-rc.5",
   "style": "Endfield industrial panels, Rahoo contours, outline wordmark and acid-yellow accents",
@@ -16,8 +16,8 @@
       "#fffa00"
     ]
   },
-  "typography": "Host UI metrics unchanged; Saira only on the startup overlay",
-  "layout": "Existing component positions, sizes, padding, typography and scrolling retained",
+  "typography": "Official unmodified HarmonyOS Sans SC Regular/Bold for UI and startup; native code font retained",
+  "layout": "Existing container geometry, font sizes, padding and scrolling retained; minor inline text width changes recorded in QA",
   "motion": {
     "startupMs": 1000,
     "wordmark": "DEEPSEEK HARNESS",
