@@ -1,4 +1,4 @@
-/* Version-bound selectors verified against DSH 0.2.1-rc.5.
+/* Version-bound selectors verified against DSH 0.2.2-rc.5.
    Host layout, sizes, input, drag-region and scrolling are retained. */
 body[data-dsh-endfield-skin] {
   --dsh-ef-yellow: #fffa00;
@@ -34,7 +34,7 @@ body[data-dsh-endfield-skin] .kB3qhq_newSession {
   clip-path: polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,7px 100%,0 calc(100% - 7px));
 }
 body[data-dsh-endfield-skin] .kB3qhq_newSession:hover { background-size: 100% 100% !important; }
-body[data-dsh-endfield-skin] :is(.kB3qhq_panelActive,[role="treeitem"][aria-selected="true"]) {
+body[data-dsh-endfield-skin] :is(.kB3qhq_panelRow[aria-current="page"],[role="treeitem"][aria-selected="true"]) {
   box-shadow: inset 4px 0 var(--dsh-ef-trace),inset 0 -1px var(--dsh-ef-line);
   background-color: var(--dsw-specific-sidebar-nav-item-active);
 }

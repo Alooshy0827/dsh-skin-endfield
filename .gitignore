@@ -36,3 +36,9 @@ qa/v0.3.0/*
 !qa/v0.3.0/geometry.json
 !qa/v0.3.0/light-home.png
 !qa/v0.3.0/dark-home.png
+!qa/v0.3.1/
+qa/v0.3.1/*
+!qa/v0.3.1/runtime.json
+!qa/v0.3.1/desktop.json
+!qa/v0.3.1/measurements.json
+!qa/v0.3.1/home.png

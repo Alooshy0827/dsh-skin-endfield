@@ -1,0 +1,46 @@
+{
+  "version": "0.3.1",
+  "dshVersion": "0.2.2-rc.5",
+  "builtFiles": {
+    "package.json": "e5c53b777767342e3eee2e33d98db3cb0526d1c78eaaf9cdbdbdbeed28f6c81f",
+    "cordis.patch.yml": "d949bbbaa7aeb853a8f4dd6524aa24568d3e5664bcedaf904f9e8eccc4015d13",
+    "lib/index.js": "eb2cf16ef4ddc5708c1595585ef38b406c71158adc66330490e0b831f1404782",
+    "lib/client.js": "cddaa1189ec0aedd9d9e2af5d0232b62e3af8c61c8f75cd1119b3218aa952fb7",
+    "LICENSES/HarmonyOS-Sans-LICENSE.txt": "b2ffec0e6269ee41c3b5fc0345ab37600b46d66ebea6c9c58ff37f517bdfa164",
+    "ASSETS.json": "94052623e1c7bfc4a68e88edb4f428f34c56436b33cc2dab15bf26962bbbbeb8"
+  },
+  "stylesheet": {
+    "expected": "e8acedd2db8a3294f2dc022a22f38d8cc0cd443c5bf46f98965d0df9e1c403db",
+    "actual": "e8acedd2db8a3294f2dc022a22f38d8cc0cd443c5bf46f98965d0df9e1c403db"
+  },
+  "checks": {
+    "inputCleared": true,
+    "themeSwitch": true
+  },
+  "scope": "Cold start, actual CSS digest, control counts and structural container rectangles at 1280x720, light/dark switching, editor input, disable/re-enable.",
+  "coldStart": {
+    "editor": true,
+    "overlay": 0,
+    "skin": "0.3.1",
+    "styles": 1
+  },
+  "coldStartLogs": [],
+  "rollback": {
+    "bodyToken": "",
+    "intro": 0,
+    "skin": null,
+    "styles": 0
+  },
+  "home": {
+    "controls": 26,
+    "differences": []
+  },
+  "settings": {
+    "controls": 48,
+    "differences": []
+  },
+  "pluginPage": {
+    "controls": 33,
+    "differences": []
+  }
+}

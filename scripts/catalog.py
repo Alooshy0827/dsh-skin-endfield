@@ -28,11 +28,17 @@ def main():
     (output / "theme-css").mkdir(parents=True, exist_ok=True)
     tokens = {}
     for name in SHEETS:
-        match = re.search(r'\bvar ' + name + r'_css_default = ("(?:\\.|[^"\\])*");', text)
-        if not match:
-            raise ValueError(f"Bundled stylesheet shape changed: {name}")
-        css = json.loads(match.group(1))
         filename = name.replace("_", "-") + ".css"
+        sheet = source.parent.parent / "src/styles" / filename
+        if sheet.is_file():
+            css = sheet.read_text()
+            location = {"source": str(sheet.relative_to(snapshot))}
+        else:
+            match = re.search(r'\bvar ' + name + r'_css_default = ("(?:\\.|[^"\\])*");', text)
+            if not match:
+                raise ValueError(f"Bundled stylesheet shape changed: {name}")
+            css = json.loads(match.group(1))
+            location = {"bundle_line": text.count("\n", 0, match.start()) + 1}
         (output / "theme-css" / filename).write_text(css + "\n")
         for rule in re.finditer(r'([^{}]+)\{([^{}]*)\}', css):
             selector, declarations = rule.groups()
@@ -40,7 +46,7 @@ def main():
                 token, value = declaration.groups()
                 tokens.setdefault(token, {"declarations": [], "used_by": []})["declarations"].append({
                     "sheet": filename, "selector": selector.strip(), "value": value.strip(),
-                    "bundle_line": text.count("\n", 0, match.start()) + 1,
+                    **location,
                 })
     for source in sorted((snapshot / "packages").glob("*/lib/client.js")):
         used = set(re.findall(r'var\(\s*(--[a-zA-Z][\w-]*)', source.read_text()))

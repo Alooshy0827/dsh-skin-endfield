@@ -1,8 +1,8 @@
 {
   "status": "verified-installed",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "target": "DeepSeek Harness Desktop",
-  "referenceVersion": "0.2.1-rc.5",
+  "referenceVersion": "0.2.2-rc.5",
   "style": "Endfield industrial panels, Rahoo contours, outline wordmark and acid-yellow accents",
   "palette": {
     "light": [

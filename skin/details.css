@@ -1,4 +1,4 @@
-/* 0.2.0 — verified DSH 0.2.1-rc.5 selectors.
+/* 0.2.0 — verified DSH 0.2.2-rc.5 selectors.
    Only decorative pseudo-elements use geometry properties. No event interception. */
 
 /* Sidebar: a ruled header, inset row markers and a quiet striped footer. */
@@ -12,16 +12,16 @@ body[data-dsh-endfield-skin] .kB3qhq_newSessionShortcut { color: #464800; }
 body[data-dsh-endfield-skin] .kB3qhq_footArea {
   background: repeating-linear-gradient(-45deg,transparent 0 3px,var(--dsh-ef-stripe) 3px 4px) left top / 100% 4px no-repeat;
 }
-body[data-dsh-endfield-skin] :is(.kB3qhq_panelRow,.JoiKIa_sessionRow,._77Pn0W_navCell) {
+body[data-dsh-endfield-skin] :is(.kB3qhq_panelRow,.PIRFFq_sidebarCol [role="treeitem"],._77Pn0W_navCell) {
   background-image: linear-gradient(var(--dsh-ef-panel),var(--dsh-ef-panel));
   background-repeat: no-repeat;
   background-size: 0% 100%;
 }
-body[data-dsh-endfield-skin] :is(.kB3qhq_panelRow,.JoiKIa_sessionRow,._77Pn0W_navCell):hover {
+body[data-dsh-endfield-skin] :is(.kB3qhq_panelRow,.PIRFFq_sidebarCol [role="treeitem"],._77Pn0W_navCell):hover {
   background-size: 100% 100%;
   box-shadow: inset 2px 0 var(--dsh-ef-trace);
 }
-body[data-dsh-endfield-skin] :is(.kB3qhq_panelActive,.JoiKIa_selected,._77Pn0W_active) {
+body[data-dsh-endfield-skin] :is(.kB3qhq_panelRow[aria-current="page"],.PIRFFq_sidebarCol [role="treeitem"][aria-selected="true"],._77Pn0W_active) {
   background-size: 100% 100%;
   box-shadow: inset 4px 0 var(--dsh-ef-trace),inset 0 -1px var(--dsh-ef-line);
 }
@@ -134,7 +134,7 @@ body[data-dsh-endfield-skin] :is(.w6M7KW_pageTitle,.w6M7KW_groupTitle) {
 
 /* Operation-bound motion. No polling, animation loops or layout movement. */
 @media (prefers-reduced-motion: no-preference) {
-  body[data-dsh-endfield-skin] :is(.kB3qhq_panelRow,.JoiKIa_sessionRow,._77Pn0W_navCell,.w6M7KW_card) {
+  body[data-dsh-endfield-skin] :is(.kB3qhq_panelRow,.PIRFFq_sidebarCol [role="treeitem"],._77Pn0W_navCell,.w6M7KW_card) {
     transition: background-size 240ms cubic-bezier(.7,0,.2,1),background-color 140ms cubic-bezier(.7,0,.2,1),box-shadow 140ms cubic-bezier(.7,0,.2,1);
   }
   body[data-dsh-endfield-skin] :is(._77Pn0W_panel,[data-menu-material]) {
@@ -157,7 +157,7 @@ body[data-dsh-endfield-skin] :is(.w6M7KW_pageTitle,.w6M7KW_groupTitle) {
   to { clip-path: inset(0); }
 }
 @media (prefers-reduced-motion: reduce) {
-  body[data-dsh-endfield-skin] :is(.kB3qhq_panelRow,.JoiKIa_sessionRow,._77Pn0W_navCell,.w6M7KW_card,._77Pn0W_panel,[data-menu-material]) {
+  body[data-dsh-endfield-skin] :is(.kB3qhq_panelRow,.PIRFFq_sidebarCol [role="treeitem"],._77Pn0W_navCell,.w6M7KW_card,._77Pn0W_panel,[data-menu-material]) {
     animation: none;
     transition: none;
   }
