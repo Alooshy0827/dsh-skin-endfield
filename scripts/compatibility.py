@@ -20,8 +20,8 @@ def render_readme(text, report):
         f"{START}\n"
         f"**最新实测适配的 DSH 版本：`{dsh}`**\n\n"
         f"当前皮肤版本：**v{skin}**。已通过桌面与隔离实例验证。\n\n"
-        f"[下载插件 ZIP](releases/dsh-skin-local-{skin}.zip) · "
-        f"[发布校验记录](releases/dsh-skin-local-{skin}.verification.json)\n"
+        f"[下载插件 ZIP](releases/endfield-{skin}.zip) · "
+        f"[发布校验记录](releases/endfield-{skin}.verification.json)\n"
         f"{END}"
     )
     result, count = re.subn(re.escape(START) + r".*?" + re.escape(END),
@@ -34,7 +34,7 @@ def render_readme(text, report):
 def verified_release(root=ROOT):
     package = json.loads((root / "skin/package.json").read_text())
     version = package["version"]
-    release = root / "releases" / f"dsh-skin-local-{version}"
+    release = root / "releases" / f"endfield-{version}"
     report = json.loads(release.with_name(release.name + ".verification.json").read_text())
     if (report["status"] != "verified" or report["version"] != version
             or report["dsh_version"] != package["engines"]["dsh"]):

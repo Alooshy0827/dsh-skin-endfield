@@ -1,6 +1,6 @@
 // Self-contained, dependency-free client. All visual changes belong to one effect.
 window.__ModuleLoader__.load({
-  id: "dsh-skin-local",
+  id: "endfield",
   factory: () => {
     const tokens = /* TOKEN_OVERRIDES */ {};
     const css = /* SKIN_CSS */ "";
@@ -36,11 +36,11 @@ window.__ModuleLoader__.load({
           };
           try {
             // Two arguments are required by the installed DSH Theme facade.
-            revokeTokens = ctx.theme.overrideTokens("dsh-skin-local", tokens);
+            revokeTokens = ctx.theme.overrideTokens("endfield", tokens);
             style.id = STYLE_ID;
             style.textContent = css;
             document.head.appendChild(style);
-            body.setAttribute(ATTR, "0.3.1");
+            body.setAttribute(ATTR, "0.3.2");
 
             // No layout participation, focus change, or input capture.
             if (typeof window.matchMedia === "function" &&
@@ -64,10 +64,10 @@ window.__ModuleLoader__.load({
             }
           } catch (error) {
             dispose();
-            console.warn("[dsh-skin-local] Skin could not load; original appearance restored.", error);
+            console.warn("[endfield] Skin could not load; original appearance restored.", error);
           }
           return dispose;
-        }, "dsh-skin-local: appearance and startup");
+        }, "endfield: appearance and startup");
       },
     };
   },

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Emergency appearance rollback, independent of DSH startup.
 
-Only deselects dsh-skin-local from a profile. Keeps all other plugins and settings.
+Only deselects the Endfield skin (current or legacy name) from a profile. Keeps all other plugins and settings.
 Close DSH before running, then reopen. An exact manifest backup is retained.
 """
 import argparse
@@ -19,12 +19,13 @@ def disable(profile: Path):
     bundles = data["dsh"]["profile"]["bundles"]
     if not isinstance(bundles, list):
         raise ValueError("Unrecognized profile bundle list; no change made")
-    if "dsh-skin-local" not in bundles:
+    skin_names = {"endfield", "dsh-skin-local"}
+    if not any(b in skin_names for b in bundles):
         return {"changed": False, "profile": str(profile)}
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     backup = profile / f"package.json.before-skin-disable-{stamp}"
     backup.write_bytes(raw)
-    data["dsh"]["profile"]["bundles"] = [b for b in bundles if b != "dsh-skin-local"]
+    data["dsh"]["profile"]["bundles"] = [b for b in bundles if b not in skin_names]
     fd, tmp = tempfile.mkstemp(prefix=".skin-rollback-", dir=profile)
     try:
         with os.fdopen(fd, "w") as f:

@@ -1,0 +1,204 @@
+{
+  "on": {
+    "home": {
+      "controls": 26,
+      "layout": [
+        [
+          "PIRFFq_sidebarCol",
+          0,
+          0,
+          280,
+          720
+        ],
+        [
+          "kiGsTW_root",
+          280,
+          0,
+          1000,
+          720
+        ],
+        [
+          "kiGsTW_header kiGsTW_headerBlank",
+          280,
+          0,
+          1000,
+          40
+        ],
+        [
+          "JZLxKW_card",
+          420.5,
+          353,
+          712,
+          114
+        ]
+      ]
+    },
+    "settings": {
+      "controls": 48,
+      "layout": [
+        [
+          "PIRFFq_sidebarCol",
+          0,
+          0,
+          280,
+          720
+        ],
+        [
+          "kiGsTW_root",
+          280,
+          0,
+          1000,
+          720
+        ],
+        [
+          "kiGsTW_header kiGsTW_headerBlank",
+          280,
+          0,
+          1000,
+          40
+        ],
+        [
+          "JZLxKW_card",
+          420.5,
+          353,
+          712,
+          114
+        ],
+        [
+          "_77Pn0W_panel",
+          240,
+          24,
+          800,
+          672
+        ],
+        [
+          "_77Pn0W_nav",
+          240,
+          78,
+          188,
+          618
+        ]
+      ]
+    },
+    "pluginPage": {
+      "controls": 33,
+      "layout": [
+        [
+          "PIRFFq_sidebarCol",
+          0,
+          0,
+          280,
+          720
+        ]
+      ]
+    }
+  },
+  "off": {
+    "pluginPage": {
+      "controls": 33,
+      "layout": [
+        [
+          "PIRFFq_sidebarCol",
+          0,
+          0,
+          280,
+          720
+        ]
+      ]
+    },
+    "home": {
+      "controls": 26,
+      "layout": [
+        [
+          "PIRFFq_sidebarCol",
+          0,
+          0,
+          280,
+          720
+        ],
+        [
+          "kiGsTW_root",
+          280,
+          0,
+          1000,
+          720
+        ],
+        [
+          "kiGsTW_header kiGsTW_headerBlank",
+          280,
+          0,
+          1000,
+          40
+        ],
+        [
+          "JZLxKW_card",
+          420.5,
+          353,
+          712,
+          114
+        ]
+      ]
+    },
+    "settings": {
+      "controls": 48,
+      "layout": [
+        [
+          "PIRFFq_sidebarCol",
+          0,
+          0,
+          280,
+          720
+        ],
+        [
+          "kiGsTW_root",
+          280,
+          0,
+          1000,
+          720
+        ],
+        [
+          "kiGsTW_header kiGsTW_headerBlank",
+          280,
+          0,
+          1000,
+          40
+        ],
+        [
+          "JZLxKW_card",
+          420.5,
+          353,
+          712,
+          114
+        ],
+        [
+          "_77Pn0W_panel",
+          240,
+          24,
+          800,
+          672
+        ],
+        [
+          "_77Pn0W_nav",
+          240,
+          78,
+          188,
+          618
+        ]
+      ]
+    }
+  },
+  "coldStart": {
+    "editor": true,
+    "overlay": 0,
+    "skin": "0.3.2",
+    "styles": 1
+  },
+  "coldStartLogs": [],
+  "rollback": {
+    "bodyToken": "",
+    "intro": 0,
+    "skin": null,
+    "styles": 0
+  },
+  "actual": "e8acedd2db8a3294f2dc022a22f38d8cc0cd443c5bf46f98965d0df9e1c403db"
+}

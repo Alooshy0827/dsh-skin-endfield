@@ -72,7 +72,7 @@ def main():
     stylesheet = runtime["stylesheet"]
     if not stylesheet["actual"] or stylesheet["actual"] != stylesheet["expected"]:
         raise ValueError("Runtime stylesheet does not match the tested build")
-    target = ROOT / "releases" / f"dsh-skin-local-{build['version']}"
+    target = ROOT / "releases" / f"endfield-{build['version']}"
     if target.exists():
         for rel, digest in build["files"].items():
             if not (target / rel).is_file() or file_hash(target / rel) != digest:

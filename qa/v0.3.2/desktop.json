@@ -1,0 +1,21 @@
+{
+  "version": "0.3.2",
+  "dshVersion": "0.2.2-rc.5",
+  "builtFiles": {
+    "package.json": "2eba52afd38b127f8c7a1938ad58882c15395fcdce08c4e3211d605a9235283b",
+    "cordis.patch.yml": "9d33a0c59c384e2fd20369a045757512718b4b3b34d62d983c452fcb1229167d",
+    "lib/index.js": "eb2cf16ef4ddc5708c1595585ef38b406c71158adc66330490e0b831f1404782",
+    "lib/client.js": "416afccee94c95415c0e47a803944296d1e719fdaeeca38d3e225985cc4ef923",
+    "LICENSES/HarmonyOS-Sans-LICENSE.txt": "b2ffec0e6269ee41c3b5fc0345ab37600b46d66ebea6c9c58ff37f517bdfa164",
+    "ASSETS.json": "94052623e1c7bfc4a68e88edb4f428f34c56436b33cc2dab15bf26962bbbbeb8"
+  },
+  "status": "passed",
+  "checks": {
+    "legacyRemoved": true,
+    "listNamedEndfield": true,
+    "detailNamedEndfield": true,
+    "componentNamedEndfield": true,
+    "enabledAfterFullRestart": true
+  },
+  "scope": "Upgraded the desktop installation from dsh-skin-local v0.3.1 via the plugin manager. After a full restart endfield v0.3.2 was the only Endfield entry, with one running component."
+}
