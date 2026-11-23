@@ -48,3 +48,9 @@ qa/v0.3.2/*
 !qa/v0.3.2/desktop.json
 !qa/v0.3.2/measurements.json
 !qa/v0.3.2/plugin.png
+!qa/v0.3.3/
+qa/v0.3.3/*
+!qa/v0.3.3/runtime.json
+!qa/v0.3.3/desktop.json
+!qa/v0.3.3/measurements.json
+!qa/v0.3.3/plugin.png

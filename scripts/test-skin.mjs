@@ -5,7 +5,7 @@ import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import vm from 'node:vm';
 
-const source = readFileSync(new URL('../dist/endfield/lib/client.js', import.meta.url), 'utf8');
+const source = readFileSync(new URL('../dist/dsh-skin-endfield/lib/client.js', import.meta.url), 'utf8');
 
 function environment({ reduced = false, failure, noBody = false } = {}) {
   const nodes = new Set(), timers = new Map(), layers = new Set(), warnings = [];
@@ -42,7 +42,7 @@ function environment({ reduced = false, failure, noBody = false } = {}) {
   const ctx = {
     theme: { overrideTokens: (name, tokens) => {
       if (failure === 'theme') throw Error('Simulated unavailable theme runtime');
-      assert.equal(name, 'endfield');
+      assert.equal(name, 'dsh-skin-endfield');
       assert.ok(Object.keys(tokens).length > 0);
       const layer = { tokens }; layers.add(layer);
       return () => layers.delete(layer);

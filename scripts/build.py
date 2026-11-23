@@ -8,7 +8,7 @@ from catalog import baseline
 from prepare import file_hash
 
 ROOT = Path(__file__).resolve().parents[1]
-DESTINATION = ROOT / "dist/endfield"
+DESTINATION = ROOT / "dist/dsh-skin-endfield"
 MARKER = "/* TOKEN_OVERRIDES */ {}"
 CSS_MARKER = '/* SKIN_CSS */ ""'
 

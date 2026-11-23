@@ -19,7 +19,7 @@ def disable(profile: Path):
     bundles = data["dsh"]["profile"]["bundles"]
     if not isinstance(bundles, list):
         raise ValueError("Unrecognized profile bundle list; no change made")
-    skin_names = {"endfield", "dsh-skin-local"}
+    skin_names = {"dsh-skin-endfield", "endfield", "dsh-skin-local"}
     if not any(b in skin_names for b in bundles):
         return {"changed": False, "profile": str(profile)}
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")

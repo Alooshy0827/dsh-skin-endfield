@@ -5,23 +5,23 @@ DeepSeek Harness 的终末地风格皮肤，保留 DSH 的原有布局与字号�
 <!-- dsh-compatibility:start -->
 **最新实测适配的 DSH 版本：`0.2.2-rc.5`**
 
-当前皮肤版本：**v0.3.2**。已通过桌面与隔离实例验证。
+当前皮肤版本：**v0.3.3**。已通过桌面与隔离实例验证。
 
-[下载插件 ZIP](releases/endfield-0.3.2.zip) · [发布校验记录](releases/endfield-0.3.2.verification.json)
+[下载插件 ZIP](releases/dsh-skin-endfield-0.3.3.zip) · [发布校验记录](releases/dsh-skin-endfield-0.3.3.verification.json)
 <!-- dsh-compatibility:end -->
 
 实际验证平台为 macOS 桌面版。这里记录的是已完成验证的版本；DSH 升级后需要重新验证兼容性。
 
-v0.3.2 在插件列表、详情页和组件开关中统一显示为 `endfield`。皮肤适配 DSH 0.2.2-rc.5 的插件版本检查、侧栏悬停和导航选中状态。界面与启动字标使用 **HarmonyOS Sans SC**，代码区继续使用 DSH 原有等宽字体。沿用纸白 `#F4F4F2` 与炭黑 `#191919`，保留 Rahoo 等高线、HARNESS 描边字标、L 形角线、斜纹和短动效。布局与字号设置不变，字体替换产生的少量字宽差异详见验证记录。启动时播放 1 秒 **DEEPSEEK HARNESS** 字标动画，支持系统减少动效。没有使用游戏角色图片。
+v0.3.3 在插件列表、详情页和组件开关中统一显示为 `dsh-skin-endfield`。皮肤适配 DSH 0.2.2-rc.5 的插件版本检查、侧栏悬停和导航选中状态。界面与启动字标使用 **HarmonyOS Sans SC**，代码区继续使用 DSH 原有等宽字体。沿用纸白 `#F4F4F2` 与炭黑 `#191919`，保留 Rahoo 等高线、HARNESS 描边字标、L 形角线、斜纹和短动效。布局与字号设置不变，字体替换产生的少量字宽差异详见验证记录。启动时播放 1 秒 **DEEPSEEK HARNESS** 字标动画，支持系统减少动效。没有使用游戏角色图片。
 
 字体为华为官方原版 Regular / Bold，随插件离线加载，未裁剪或转换。[字体来源](https://developer.huawei.com/images/download/general/HarmonyOS-Sans.zip) · [HarmonyOS Sans Fonts License Agreement](skin/assets/HarmonyOS-Sans-LICENSE.txt)。字体采用原厂许可，允许随软件嵌入分发，并非 OFL；原始版权与许可随安装包保留。
 
 ## 成果
 
 - [鸿蒙字体更新与验证范围](docs/v0.3.0.md)
-- [冻结插件目录](releases/endfield-0.3.2/)
-- [插件 ZIP](releases/endfield-0.3.2.zip)
-- [发布校验报告](releases/endfield-0.3.2.verification.json)
+- [冻结插件目录](releases/dsh-skin-endfield-0.3.3/)
+- [插件 ZIP](releases/dsh-skin-endfield-0.3.3.zip)
+- [发布校验报告](releases/dsh-skin-endfield-0.3.3.verification.json)
 - [深色界面](qa/v0.3.0/dark-home.png)
 - [浅色界面](qa/v0.3.0/light-home.png)
 - [v0.2.0 启动动效实录（本版字体已更换）](qa/v0.2.0/startup-recording.mp4)
@@ -33,16 +33,16 @@ DSH 0.2.2-rc.5 首页预览（v0.3.1）。
 ## 安装
 
 1. 下载上方 ZIP 并解压，或克隆本仓库。
-2. 在 DSH **插件 → 添加插件** 中填写解压后的 `endfield-0.3.2` 目录的绝对路径；克隆仓库时使用 `releases/endfield-0.3.2` 的绝对路径。
+2. 在 DSH **插件 → 添加插件** 中填写解压后的 `dsh-skin-endfield-0.3.3` 目录的绝对路径；克隆仓库时使用 `releases/dsh-skin-endfield-0.3.3` 的绝对路径。
 3. 安装后点击 **立即启用**。使用期间保留该目录，DSH 会通过本地链接加载它。
 
-从 v0.3.1 或更早版本升级时，先在插件管理器卸载旧条目 `dsh-skin-local`，再安装并启用 `endfield`，然后完整退出并重新打开 DSH。
+升级时先在插件管理器卸载旧条目（v0.3.2 为 `endfield`，更早版本为 `dsh-skin-local`），再安装并启用 `dsh-skin-endfield`，然后完整退出并重新打开 DSH。
 
 ## 已验证
 
-v0.3.2 已通过 8 项自动测试，覆盖 100 次启停和加载失败回退。隔离实例完成冷启动、插件启停和三页布局对比。桌面版完成旧包卸载、新包安装和完整重启。重启后列表和详情页都显示 `endfield`，详情页显示一个运行中的组件。
+v0.3.3 已通过 8 项自动测试，覆盖 100 次启停和加载失败回退。隔离实例完成冷启动、插件启停和三页布局对比。桌面版完成旧包卸载、新包安装和完整重启。重启后列表和详情页都显示 `dsh-skin-endfield`，详情页显示一个运行中的组件。
 
-[插件详情截图](qa/v0.3.2/plugin.png) · [运行验证](qa/v0.3.2/runtime.json) · [布局测量](qa/v0.3.2/measurements.json) · [桌面验证](qa/v0.3.2/desktop.json)
+[插件详情截图](qa/v0.3.3/plugin.png) · [运行验证](qa/v0.3.3/runtime.json) · [布局测量](qa/v0.3.3/measurements.json) · [桌面验证](qa/v0.3.3/desktop.json)
 
 ## 开发
 
@@ -72,7 +72,7 @@ python3 scripts/compatibility.py --check
 
 ## 回退
 
-DSH **插件 → endfield → 关闭开关** 即恢复原外观。若以后无法打开界面，先退出 DSH，再从仓库根目录运行：
+DSH **插件 → dsh-skin-endfield → 关闭开关** 即恢复原外观。若以后无法打开界面，先退出 DSH，再从仓库根目录运行：
 
 ```sh
 python3 scripts/disable-skin.py
